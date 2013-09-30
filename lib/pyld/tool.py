@@ -32,7 +32,7 @@ def main():
                     if graph_name == '@default':
                         graph_name = None
                     quad = JsonLdProcessor.to_nquad(triple, graph_name)
-                    outfile.write(quad)
+                    outfile.write(quad.encode('utf8'))
 
 
 if __name__ == "__main__":
